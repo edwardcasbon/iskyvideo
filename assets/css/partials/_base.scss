@@ -1,0 +1,145 @@
+* {
+	@include box-sizing(border-box);
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+html {
+	font-size: ($baseFontSize/16) + em;
+	font-family: $baseFont;
+	color: $bodyColour;
+}
+
+body {
+	line-height: $baseLineHeight;
+	-webkit-font-smoothing: antialiased;
+}
+
+.skip-link {
+    display: none; /* @todo Is this the best way? */
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    color: $bodyColour;
+    line-height: 1.3;
+    margin:1.5em 0 0.5em 0;
+}
+
+h1 {
+    @include font-size(24);
+}
+
+h2 {
+    @include font-size(20);
+}
+
+h3 {
+    @include font-size(14);
+}
+
+h4 {
+      @include font-size(13);
+}
+
+p, ul, ol, li {
+    margin: 0 0 1.857em 0; /* 0 0 26px 0 */
+}
+
+ul, ol {
+  margin: 0 0 3.71em 0; /* 0 0 52px 0 */
+  padding: 0 1.857em 0 1.857em; /* 0 0 26px 0 */
+}
+
+li { 
+    list-style-position: inside;
+}
+
+a, a:link, a:visited, a:focus, a:active {
+	color: $linkColour;
+	background: none;
+}
+
+a:hover {
+	color: $linkColour;
+}
+
+em, strong, b {
+    font-weight: bold;
+}
+
+i {
+    font-style: italic;
+}
+
+pre {
+  display: block;
+  width: 100%;
+  max-height:30em;
+  overflow: scroll;
+  /*   for iPhone */
+  -webkit-overflow-scrolling: touch;  
+  padding:1em;
+  border: 1px solid $black;
+  margin-bottom:2em;
+  font-family: Courier, monospace;
+  @include font-size(12);
+   page-break-inside: avoid; 
+}
+
+small {
+  font-size: 95%;
+  font-style: italic;
+  font-weight: 400;  
+}
+
+hr { 
+  clear:both;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $black;
+  margin: 1em 0;
+  padding: 0; 
+}
+
+.button, a.button {
+    background: $blue;
+    display: inline-block;
+	margin: auto;
+    padding: 1.25em 1em;
+    @include border-radius(5px);
+    color: $white;
+    @include font-size(12);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    -webkit-transition:background-color 0.4s;
+    transition:background-color 0.4s;
+}
+a:hover.button {
+    background: $blue;
+}
+
+.inner-container {
+	max-width: $netbook;
+	margin: auto;
+}
+
+.content {
+	padding: 0 2em;
+}
+
+.example, body {
+	@include responsive(tablet) {
+	}
+	@include responsive(netbook) {
+	}
+	@include responsive(desktop) {
+	}
+}
