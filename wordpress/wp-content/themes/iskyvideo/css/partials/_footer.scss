@@ -1,0 +1,10 @@
+footer {
+    clear: both;
+	margin: 0;
+	padding: 1em;
+	p {
+		margin: 0;
+		text-align: center;
+		@include font-size(12);
+	}
+}
