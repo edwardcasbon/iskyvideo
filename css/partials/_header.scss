@@ -19,22 +19,29 @@ header {
 		ul {
 			list-style: none;
 			margin: 0;
+			margin-top: 1em;
 			li {
 				margin: 0;
+				margin-top: 0.25em;
 				text-align: center;
 				a {
 					display: block;
 					text-transform: uppercase;
 					text-decoration: none;
 					padding: 1em 0.5em;
-				}
-                &.current-menu-item, a:hover{
-                    a, & {
+					@include border-radius(10px);
+					&:hover {
                         color: $white;
                         background: $blue;
-                        @include border-radius(10px);
-                    }
-                }
+					}
+				}
+				&.current-menu-item,
+				&.current-page-ancestor {
+					a {
+	                    color: $white;
+	                    background: $blue;
+					}
+				}
 			}
 		}
 	}
@@ -68,7 +75,7 @@ header {
 		}
 		nav.primary {
 			float: right;
-			margin-top: 0.6em;
+			margin-top: 0.25em;
 		}
 	}
 }

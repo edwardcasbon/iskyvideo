@@ -61,6 +61,7 @@ li {
 a, a:link, a:visited, a:focus, a:active {
 	color: $linkColour;
 	background: none;
+	@include transition(background-color, 0.15s);
 }
 
 a:hover {

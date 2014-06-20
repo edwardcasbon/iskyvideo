@@ -12,7 +12,7 @@
         <div class="content">
             <h1>Video without limits.</h1>
             <h2>Specialising in aerial drone video and photography.</h2>
-            <a class="button" href="#">Get in touch for a quote</a>
+            <a class="button" href="/contact-us">Get in touch for a quote</a>
         </div>
     </div>
 </section>

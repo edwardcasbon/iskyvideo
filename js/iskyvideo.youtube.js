@@ -27,7 +27,8 @@ ISkyVideo.Youtube = (function(){
                     autoplay: 1,
                     modestbranding: 1,
                     start: 5,
-                    loop: 1
+                    loop: 1,
+					playlist: videoId
                 },
                 events: {
                     'onReady': function(e) {
