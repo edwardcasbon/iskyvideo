@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     concat: {
       options: {},
       dist: {
-        src: ['js/*.js', '!js/iskyvideo.min.js'],
+        src: ['js/vendor/*.js', '!js/vendor/modernizr.js', 'js/*.js', '!js/iskyvideo.min.js'],
         dest: 'js/iskyvideo.min.js'
       }
     },
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
       options: {},
       js: {
         files: {
-          'js/iskyvideo.min.js' : ['js/*.js', '!js/iskyvideo.min.js']
+          'js/iskyvideo.min.js' : ['js/vendor/*.js', '!js/vendor/modernizr.js', 'js/*.js', '!js/iskyvideo.min.js']
         }
       }
     },

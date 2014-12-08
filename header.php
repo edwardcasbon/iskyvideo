@@ -4,8 +4,8 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width">
 <title><?php wp_title( '-', true, 'right' ); ?></title>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/global.css">
-<script src="<?php echo get_template_directory_uri()?>/js/modernizr.js"></script>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/global.css?v=1">
+<script src="<?php echo get_template_directory_uri()?>/js/vendor/modernizr.js"></script>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
