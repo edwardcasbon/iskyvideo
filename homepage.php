@@ -33,6 +33,7 @@
     <li><img src="<?php echo get_template_directory_uri()?>/img/layout/grid-4.png" alt=""></li>
 </ul>
 
+<!-- 
 <section class="testimonial">
         <blockquote>
             <div class="inner-container">
@@ -41,5 +42,5 @@
             </div>
         </blockquote>
 </section>
-
+-->
 <?php get_footer();

@@ -7,7 +7,10 @@
 	
 	<footer>
 		<div class="inner-container">
-			<p>Copyright iskyvideo &copy; 2014. All Rights Reserved.</p>
+			<p>Iskyvideo Limited Registered in England and Wales No. 08895696</p>
+			<p>Registered Office 11 Treen Close, Thrapston NN14 4UU</p>
+			<p>VAT registration No. 199 4724 49</p>
+			<p>Copyright iskyvideo &copy; 2014. All Rights Reserved. <a href="/privacy-cookies/">Privacy & Cookies</a></p>
 		</div>
 	</footer>
 	
