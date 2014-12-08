@@ -39,5 +39,11 @@ ISkyVideo.Youtube = (function(){
             });
         }
     };
+	
+	if(!!navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+		// Remove video if on ios as ios doesn't autoplay.
+		var video = document.getElementById('hero-video');
+		video.parentNode.removeChild(video);
+	}
 
 })();
