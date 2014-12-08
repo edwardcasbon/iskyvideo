@@ -39,12 +39,5 @@
         <nav class="primary">
             <?php wp_nav_menu(); ?>
         </nav>
-        <nav class="social">
-            <ul>
-                <li><a href="" class="twitter"><img src="<?php echo get_template_directory_uri()?>/img/layout/twitter.png" class="svg" alt=""></a></li>
-                <li><a href="" class="facebook"><img src="<?php echo get_template_directory_uri()?>/img/layout/facebook.png" class="svg" alt=""></a></li>
-                <li><a href="" class="linkedin"><img src="<?php echo get_template_directory_uri()?>/img/layout/linkedin.png" class="svg" alt=""></a></li>
-            </ul>
-        </nav>
     </div>
 </header>
