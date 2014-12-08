@@ -27,10 +27,10 @@
 </section>
 
 <ul class="grid">
-    <li><img src="<?php echo get_template_directory_uri()?>/img/layout/grid-1.png" alt=""></li>
-    <li><img src="<?php echo get_template_directory_uri()?>/img/layout/grid-2.png" alt=""></li>
-    <li><img src="<?php echo get_template_directory_uri()?>/img/layout/grid-3.png" alt=""></li>
-    <li><img src="<?php echo get_template_directory_uri()?>/img/layout/grid-4.png" alt=""></li>
+    <li><img src="<?php echo get_template_directory_uri()?>/img/layout/grid-1.jpg" alt=""></li>
+    <li><img src="<?php echo get_template_directory_uri()?>/img/layout/grid-2.jpg" alt=""></li>
+    <li><img src="<?php echo get_template_directory_uri()?>/img/layout/grid-3.jpg" alt=""></li>
+    <li><img src="<?php echo get_template_directory_uri()?>/img/layout/grid-4.jpg" alt=""></li>
 </ul>
 
 <!-- 
