@@ -19,10 +19,8 @@
 
 <section class="content">
     <div class="inner-container">
-        <h1>Welcome to iskyvideo</h1>
-        <p>We specialise in aerial drone video and photography.</p>
-        <p>Whether you are making the next big music video, or looking for that perfect scenic shot to make your project come alive, we can help.</p>
-        <p>All footage is recorded in glorious 1080p High Definition, ensuring the highest quality and sustainability no matter the nature of the project.</p>
+		<h1><?php the_title(); ?></h1>
+		<?php the_content() ?>
     </div>
 </section>
 

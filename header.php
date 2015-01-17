@@ -35,7 +35,7 @@
 
 <header>
     <div class="inner-container">
-        <a href="/" class="logo"><img src="<?php echo get_template_directory_uri()?>/img/layout/logo.png" class="" alt="iSky Video logo"></a>
+        <a href="/" class="logo"><img src="<?php echo get_template_directory_uri()?>/img/layout/logo.png?v=1" class="" alt="iSky Video logo"></a>
         <nav class="primary">
             <?php wp_nav_menu(); ?>
         </nav>
