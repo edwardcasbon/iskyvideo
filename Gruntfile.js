@@ -74,7 +74,7 @@ module.exports = function(grunt) {
         tasks: ['sass', 'autoprefixer']
       },
       js: {
-        files: ['js/iskyvideo/**/*.js'],
+        files: ['js/iskyvideo.js', 'js/iskyvideo/**/*.js'],
         tasks: ['jshint', 'uglify']
 	  }
 	}
