@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #SPACING SETTINGS
+\*------------------------------------*/
+
+
+/**
+ * Spacing units - based off $base-line-height.
+ */
+$base-spacing-unit: $base-line-height * $base-font-size !default;
+$base-spacing-unit--small: round($base-spacing-unit / 2) !default;
+$base-spacing-unit--large: round($base-spacing-unit * 2) !default;
+
+
+/**
+ * White list of margin scales.
+ */
+$base-margin-whitelist: (0, 0.5, 1, 1.5, 2) !default;
+
+
+/**
+ * White list of padding scales.
+ */
+$base-padding-whitelist: (0, 0.5, 1, 1.5, 2) !default;

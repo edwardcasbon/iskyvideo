@@ -1,0 +1,108 @@
+/* =IMAGES
+----------------------------------------------------- */
+
+// Alignment ?? (again maybe not image-specific)
+// Images as links
+// Lightboxed images
+
+
+/* TODO: check this is the right object for the job.+ */
+/* TODO: just use a descendant selector? Probably this will be too wide-ranging. */
+
+/* linked images - turn off borders and dip the opacity on hover */
+a.image-link, a:link.image-link, a:focus.image-link, a:active.image-link, a:hover.image-link {
+	border: none;
+}
+a:hover.image-link {
+	opacity: 0.5;
+}
+
+
+
+
+/* =FIGURES
+----------------------------------------------------- */
+
+/* captioned figure */
+/*
+.figure--caption {
+	display: inline-block;
+	width: auto;
+	@include px-rem(padding, 12);
+	img {
+		text-align: center;
+		margin: auto 0;
+		border-style: solid;
+		border-width: 1px;
+		border-color: $colour--grey;
+	}
+	figcaption {
+		@include px-rem(padding, 4, 4, 0, 4);
+		margin-bottom: 0;
+	    font-size: 85%;
+	}
+}
+*/
+
+
+
+// Lightboxed image.
+	// the span is the zoom icon
+   	// Set a default style here which can be over-ridden in your project styles?
+
+/*
+a.lightbox, a.lightbox:link, a.lightbox:visited, a.lightbox:focus, a.lightbox:active
+	{
+	display: block;
+	border-bottom: none;
+	@include transition(all, 0.4s, ease);
+	&:hover {
+		border-bottom: none;
+	}
+	&.lightbox--image {
+	    position: relative;
+    	display:block;
+    	    span {
+			z-index: 1;
+			position: absolute;
+	    	@include px-rem(top, 4);
+	    	@include px-rem(right, 4);
+	    	width: 30px;
+	    	height: 30px;
+			display: table;
+	    	text-align: center;
+	    	vertical-align: middle;
+	    	padding:1px;
+			@include px-rem(font-size, 28);
+	    	color: $colour--black;
+			@include px-rem(border-radius, 28);
+			opacity: 0.5;
+			background-color: $colour--white;
+	    }
+	    img {
+	    	width:100%;
+	    	height:auto;
+			@include transition(all, 0.4s, ease);
+	    }
+	    &:hover {
+		    span {
+			    opacity: 1;
+			}
+		    img {
+		    	transform: scale(1.05);
+		    }
+	    }
+	}
+	&.lightbox--video-has-poster {
+		overflow: hidden;
+		img {
+			width: 200%;
+			position: relative;
+		}
+		&:hover img {
+			left: -100%;
+		}
+	}
+}
+
+*/

@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    #STYLE-GUIDE
+\*------------------------------------*/
+/**
+ * Basic styles for the default style-guide.
+ */
+
+.band--style-guide .band__inner-container {
+    @include padding(2, top);
+    @include padding(0.5, bottom);
+}
+
+
+.section-heading--style-guide {
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+}
+
+
+/*------------------------------------*\
+    #COLOUR-CHIPS
+\*------------------------------------*/
+.colour-chips {
+    margin-left:0;
+    li {
+        display: inline-block;
+        height: 44px;
+        padding: 20px;
+        text-align: center;
+        vertical-align: top;
+        width: 88px;
+        @include rounded;
+        @include border;
+/*         border-color: $light-grey; */
+        	&:before, &:after {
+	   display: block;
+	}
+
+      /*
+  &:before, &:after {
+          display: block;
+          color: #444;
+          background-color: #fff;
+          padding:5px;
+        }
+*/
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+.style-guide-footer {
+    .band {
+        @include padding(1, top);    
+        @include padding(1, bottom);     
+    }
+}
+
+
+
+

@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    #BUTTON STYLES
+\*------------------------------------*/
+
+.button,
+%button {
+    @include margin(1, bottom);
+    display: inline-block;
+    padding: $base-button-padding;
+    background-color: $base-button-background;
+    color: $base-button-colour;
+    border-width: $base-button-border-width;
+    border-style: $base-button-border-style;
+    border-color: $base-button-border-colour;
+    border-radius: $base-button-radius;
+
+    &:hover {
+      background-color: $base-button-hover-background;
+      color: $base-button-hover-colour;
+      border-width: $base-button-hover-border-width;
+      border-style: $base-button-hover-border-style;
+      border-color: $base-button-hover-border-colour;
+    }
+}
+
+.button--large,
+%button--large {
+  padding: $base-button-padding--large;
+}
+
+.button--small,
+%button--small {
+  padding: $base-button-padding--small;
+}
+
+.button--full-width,
+%button--full-width {
+  display: block;
+  text-align: center;
+}
+
+.button--inline,
+%button--inline {
+  display: inline;
+}

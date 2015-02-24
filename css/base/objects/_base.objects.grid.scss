@@ -1,0 +1,90 @@
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+
+
+// @TODO: Should this be in mixins?
+
+
+/**
+ * Generate the CSS grid classes from global / project settings.
+ */
+ 
+ 
+@mixin buildGrid ($suffix: "") {
+  @if $base-enable-grid-classes {
+    @include build($suffix);
+    @include build($suffix, "push", "margin-left");
+  } @else {
+    @warn "CSS grid classes are disabled. Please enable CSS grid classes using `$base-enable-grid-classes: true`";
+  }
+}
+
+@mixin build ($suffix: "", $action: "span", $property: "width") {
+  @if $base-enable-grid-classes {
+    @each $base-grid-col in $base-grid-cols {
+      @for $i from 1 through $base-grid-col {
+        .#{$base-grid-class}__col--#{$action}-#{$i}-of-#{$base-grid-col}#{$suffix} {          $value: (($i * 100) / $base-grid-col) * 1%;
+          #{$property}: $value;
+        }
+      }
+    }
+  } @else {
+    @warn "CSS grid classes are disabled. Please enable CSS grid classes using `$base-enable-grid-classes: true`";
+  }
+}
+
+@if $base-enable-grid-classes {
+  .#{$base-grid-class} {
+    &:before, &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+  .#{$base-grid-class}__row {
+    @extend %clearfix;
+  }
+
+  .#{$base-grid-class}__col {
+    display: block;
+    float: left;
+    margin: 0;
+  }
+
+  /**
+   * Build the default grid.
+   */ 
+  @include buildGrid();
+
+  /**
+   * Build the grid at breakpoints.
+   */ 
+   @each $breakpoint in $base-breakpoints {
+    $name: nth($breakpoint, 1);
+    $minWidth: nth($breakpoint, 2);
+    $maxWidth: false;
+    $declaration: false;
+
+    $index: index($base-breakpoints, $breakpoint);
+    @if $index == 1 {
+      $maxWidth: false;
+    } @else {
+      $prevBP: nth($base-breakpoints, ($index - 1));
+      $maxWidth: nth($prevBP, 2) - 1;
+    }
+
+    @if($maxWidth) {
+      $declaration: "(min-width: #{$minWidth}) and (max-width: #{$maxWidth})";
+    } @else {
+      $declaration: "(min-width: #{$minWidth})";
+    }
+
+    @media only screen and #{$declaration} {
+      @include buildGrid("--#{$name}");
+    }
+  }
+}

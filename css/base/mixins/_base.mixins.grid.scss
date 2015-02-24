@@ -1,0 +1,54 @@
+// TODO add some documentation and examples
+
+/**
+* GRID MIXINS
+* -----------------------------------------------------------------------------
+*/
+@mixin grid-container () {
+  @if $base-enable-grid-mixins {
+    &:before, &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+}
+@mixin grid-col-span ($span, $total, $margin-left:0, $margin-right:0) {
+  @if $base-enable-grid-mixins {
+    @if index($base-grid-cols, $total) {
+
+      // Calculate the width, adding in the margin.
+      $width: (($span / $total) * 100) * 1%;
+      $width: $width - $margin-left - $margin-right;
+
+      display: block;
+      float: left;
+      margin: 0;
+
+      // If margin left, then write the CSS.
+      @if $margin-left != 0 {
+        margin-left: $margin-left * 1%;
+      }
+
+      // If margin right, then write the CSS.
+      @if $margin-right != 0 {
+        margin-right: $margin-right * 1%;
+      }
+
+      width: $width;
+    } @else {
+      @warn "Column count `#{$total}` is not a valid count in the allowed grid column list.";
+    }
+  }
+}
+@mixin grid-col-push ($push, $total) {
+  @if $base-enable-grid-mixins {
+    @if index($base-grid-cols, $total) {
+      margin-left: (($push / $total) * 100) * 1%;
+    } @else {
+      @warn "Column count `#{$total}` is not a valid count in the allowed grid column list.";
+    }
+  }
+}

@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #BUTTON SETTINGS
+\*------------------------------------*/
+
+$base-button-padding:         $base-spacing-unit / 2 !default;
+$base-button-padding--small:  $base-button-padding / 2 !default;
+$base-button-padding--large:  $base-button-padding * 2 !default;
+$base-button-background:      #666 !default;
+$base-button-colour:          #fff !default;
+$base-button-border-width:    0px !default;
+$base-button-border-style:    solid !default;
+$base-button-border-colour:    $base-button-background !default;
+$base-button-radius:          5px !default;
+
+// Hover states
+$base-button-hover-background:      #333 !default;
+$base-button-hover-colour:          $base-button-colour !default;
+$base-button-hover-border-width:    $base-button-border-width !default;
+$base-button-hover-border-style:    $base-button-border-style !default;
+$base-button-hover-border-colour:   $base-button-border-colour !default;

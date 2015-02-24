@@ -1,0 +1,50 @@
+/**
+* TABBED BAND
+*/
+.tabbed {
+}
+
+.tabbed__nav {
+  @include margin(2, left);
+  @include margin(2, right);
+
+  ul {
+    @extend %list--bare;
+    @extend %list--horizontal;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+    li {
+      display: table-cell;
+      vertical-align: bottom;
+
+      a {
+        display: block;
+        @include padding(1);
+        @include border-left();
+        @include border-top();
+
+        &.active {
+          position: relative;
+          top: 1px;
+          border-bottom-color: #fff;
+        }
+
+      }
+
+      &:last-of-type a {
+        @include border-right();
+      }
+    }
+  }
+}
+
+.tabbed__container {
+  @include margin(0, bottom);
+  @include border-top();
+}
+
+.tabbed__tab {
+  @include padding(2);
+}

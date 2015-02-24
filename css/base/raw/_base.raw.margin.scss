@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #MARGINS
+\*------------------------------------*/
+
+/**
+ * Set a default margin equal to the global line-height, on most block level elements.
+ * Only add margin to the bottom, to keep some vertical rhythm.
+ */
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+table,
+fieldset, figure,
+pre,
+hr
+{
+    @include margin(1, bottom);
+}

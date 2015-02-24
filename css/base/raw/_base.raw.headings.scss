@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+
+/**
+ * Basic styles for raw unclassed headings.
+ */
+
+
+// @TODO: http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ ????
+
+h1,
+.alpha,
+%alpha {
+  @include font-size($heading-size-1);
+  font-weight: $heading-size-1-font-weight;
+}
+
+
+h2,
+.beta,
+%beta {
+  @include font-size($heading-size-2);
+  font-weight: $heading-size-2-font-weight;
+}
+
+
+h3,
+.gamma,
+%gamma {
+  @include font-size($heading-size-3);
+  font-weight: $heading-size-3-font-weight;
+}
+
+
+h4,
+.delta,
+%delta {
+  @include font-size($heading-size-4);
+  font-weight: $heading-size-4-font-weight;
+}
+
+
+h5,
+.epsilon,
+%epsilon {
+  @include font-size($heading-size-5);
+  font-weight: $heading-size-5-font-weight;
+}
+
+
+h6,
+.zeta,
+%zeta {
+  @include font-size($heading-size-6);
+  font-weight: $heading-size-6-font-weight;
+}
+
+
+
+

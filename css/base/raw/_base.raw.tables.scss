@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    #TABLE
+\*------------------------------------*/
+
+/**
+ * To keep things lined up, mark up your tables to a 24-col grid.
+ * Basically, put colspan on every cell, andmake sure your colspans add up to 24.
+ * Also add the .table-grid  helper class to your table.
+ * http://csswizardry.com/2013/11/taming-data-tables/
+ */
+
+
+// @TODO: Set default table colours in global settings ???
+
+
+table {
+    width: 100%;
+    vertical-align: top;
+}
+
+/**
+ * Move the caption beneath the table.
+ * Note: Caption must be the first element within the table element.
+ */
+table caption {
+    caption-side: bottom;
+    @include margin(0.5, top);
+}
+
+
+th, td {
+    @include padding(0.5);
+    @include border();
+}
+
+
+th {
+    font-weight: bold;
+}
+
+
+/**
+ * Force table cells to all render at the same width.
+ */
+.table-grid {
+    table-layout: fixed;
+}

@@ -7,12 +7,12 @@ module.exports = function(grunt) {
       dist: {
         options: {
           style: 'compressed',
-          sourcemap: 'none'
+          sourcemap: 'auto'
         },
         files: [{
           expand: true,
           cwd: 'css',
-          src: ['*.scss', '*/*.scss'],
+          src: ['*.scss', '*/*.scss', '!vendor/**/*'],
           dest: 'css',
           ext: '.css'
         }]
@@ -21,7 +21,10 @@ module.exports = function(grunt) {
 
     /* JSHint - Check JS syntax */
     jshint: {
-      options: {},
+      options: {
+		  loopfunc: true,
+		  expr: true
+      },
       js: ['js/*.js']
     },
 
@@ -36,23 +39,43 @@ module.exports = function(grunt) {
 
     /* Uglify - Concatenate and minify JavaScript */
     uglify: {
-      options: {},
+      options: {
+		  sourceMap: true
+      },
       js: {
         files: {
-          'js/iskyvideo.min.js' : ['js/vendor/*.js', '!js/vendor/modernizr.js', 'js/*.js', '!js/iskyvideo.min.js']
+          'js/iskyvideo.min.js' : [
+			  'js/vendor/**/*.js', 
+			  '!js/vendor/modernizr.js', 
+			  'js/base/**/*.js',
+			  'js/iskyvideo.js',
+			  'js/iskyvideo/**/*.js'
+		  ]
         }
       }
+    },
+	
+	/* Automatically add vendor-prefixes to CSS using the "Can I Use" database. */
+    // Use '$ npm update caniuse-db' to update the prefixes database.
+    autoprefixer: {
+        options: {
+            browsers: ['last 2 versions', 'ie >= 8'],
+            map: true
+        },
+        css: {
+            src: ['css/iskyvideo.css']
+        }
     },
 
     /* Watch scss and js and process when they're updated */
     watch: {
       sass: {
-        files: ['css/*.scss', 'css/*/*.scss'],
-        tasks: ['sass']
+        files: ['css/*.scss', 'css/**/*.scss'],
+        tasks: ['sass', 'autoprefixer']
       },
       js: {
-        files: ['js/*.js', '!js/iskyvideo.min.js'],
-        tasks: ['uglify']
+        files: ['js/iskyvideo/**/*.js'],
+        tasks: ['jshint', 'uglify']
 	  }
 	}
   });
@@ -63,6 +86,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Register the default task.
   grunt.registerTask('default', 'watch');

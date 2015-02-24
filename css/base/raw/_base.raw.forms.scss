@@ -1,0 +1,31 @@
+/* Generic form styles */
+form, fieldset {
+    border: none;
+}
+
+input, select, textarea, label {
+    display: block;
+}
+
+input, select, textarea {
+    @include border();
+    @include margin(1, bottom);
+    @include padding(0.5);
+    width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block;
+    border: none;
+    width: auto;
+    & + label {
+        display: inline-block;
+        @include margin(1, right);
+    }
+}
+
+input[type="submit"] {
+    @extend %button;
+    width: auto;
+}

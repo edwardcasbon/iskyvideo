@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+/**
+ * Basic styles for the HTML doc.
+ */
+
+html {
+  font-size: 100%;
+  font-family: $base-font-family;
+  line-height: $base-line-height; 
+  background-color: colour(default-bg);
+  color: colour(default-text);
+  overflow-y: scroll;
+  min-height: 100%;
+}

@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #BANDS
+\*------------------------------------*/
+
+/**
+ * a .band is a full-width, stackable band of content with no margin-bottom.
+ */
+
+.band,
+%band {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+}
+
+/**
+ * .band__inner-wrapper is a content wrapper within .band which is:
+ *  1. Centered
+ *  2. A class hook for constraining the width of it's contained content
+ */
+
+.band__inner-container,
+%band__inner-container {
+  margin: auto;
+  @include clearfix();  
+}

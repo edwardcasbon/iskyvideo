@@ -1,0 +1,37 @@
+.pagination {
+    @include border-top();
+    @include padding(0.5);
+    @include clearfix();
+    float: left;
+    width: 100%;
+}
+
+.pagination__prev {
+    float: left;
+    text-align: left;
+    &:before {
+        content: "\f053";
+        font-family: "FontAwesome";
+        @include margin(0.5, right);
+    }
+}
+
+.pagination__next {
+    float: right;
+    text-align: right;
+    &:after {
+        content: "\f054";
+        font-family: "FontAwesome";
+        @include margin(0.5, left);
+    }
+}
+
+.pagination__index {
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+
+    li {
+        display: inline-block;
+    }
+}

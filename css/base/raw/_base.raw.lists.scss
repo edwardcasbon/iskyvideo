@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+
+/**
+ * Basic styles for raw unclassed lists.
+ */
+ 
+ul, ol, dd {
+  @include margin(2, left);
+}
+
+li {
+  @include margin(1, bottom);
+}
+
+
+dl { }
+dt {
+  font-weight: bold; }
+dd { }

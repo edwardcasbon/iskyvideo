@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    #COLOUR SETTINGS
+\*------------------------------------*/
+
+/**
+ * Set default colour variable values.
+ * These can be overwritten by the $site-colours SASS map in project.settings.colours.scss
+ */
+
+$site-colours: (
+    default-bg: (
+        base: #fff
+    ),
+    default-text: (
+        base: #444
+    ),
+	black: (
+		base: #000
+	),
+	white: (
+		base: #fff
+	),
+	grey: (
+	    base: #b6b6b6,
+	    light: #dcdcdc,
+	    lightest: #f6f6f6,
+	    dark: #767676,
+	    darkest: #373737
+	)
+) !default;
